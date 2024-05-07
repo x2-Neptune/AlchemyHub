@@ -46,9 +46,8 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣦⣤⣤⡾⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ]]
-pcall(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Ads/__Name.HunterXHub"))()
-end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Ads/__Name.HunterXHub"))()
+wait(3.8)
 if not _G.Aimbot then
     __Luable = {["ACM"] = {"discord.gg/alchemyhub",{{game.PlaceId,{"__BloxFruits","__BuildABoat","__KingLegacy","__BladeBall","__SolsRNG"}},
     {tostring, loadstring},{"luable.top","<3"},{"x2neptune.tech"}},{3, 5, 1, 4, 2}}}i = {(__Luable["ACM"])};v = {"iRS", i[1]};

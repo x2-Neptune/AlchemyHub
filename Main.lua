@@ -48,6 +48,22 @@
 ]]
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Ads/__Name.HunterXHub"))()
 wait(.8)
+if _G.StreamerMode then
+    pcall(function()
+        local a_protect = game:GetDescendants()
+        local n_protect =  game:GetService("Players").LocalPlayer.DisplayName
+        local f_protect =  game:GetService("Players").LocalPlayer.Name
+        for i=1,#a_protect do
+            if a_protect[i].ClassName == "TextLabel" then
+                if a_protect[i].Text == n_protect then
+                    a_protect[i].Text = "Protect By Alchemy"
+                elseif a_protect[i].Text == "@"..f_protect then
+                    a_protect[i].Text = "@Protect By Alchemy"
+                end
+            end
+        end
+    end)
+end
 if not _G.Aimbot then
     __Luable = {["ACM"] = {"discord.gg/alchemyhub",{{game.PlaceId,{"__BloxFruits","__BuildABoat","__KingLegacy","__BladeBall","__SolsRNG"}},
     {tostring, loadstring},{"luable.top","<3"},{"x2neptune.tech"}},{3, 5, 1, 4, 2}}}i = {(__Luable["ACM"])};v = {"iRS", i[1]};

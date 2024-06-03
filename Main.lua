@@ -157,8 +157,8 @@ if _G.PremiumVersion then
     else __AdBanner["7"]["Visible"] = true end
     __AdBanner["7"].MouseButton1Click:Connect(function() if setclipboard then setclipboard('https://discord.gg/wXezdGtWsW') end end)
     __AdBanner["2"].MouseButton1Click:Connect(function() if setclipboard then setclipboard('https://discord.gg/wXezdGtWsW') end end)
+    wait(3); __AdBanner["1"]:Destroy()
 end
-wait(5); __AdBanner["1"]:Destroy()
 if _G.StreamerMode then
     pcall(function()
         local a_protect = game:GetDescendants()

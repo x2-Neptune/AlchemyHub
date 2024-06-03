@@ -152,10 +152,12 @@ __AdBanner["b"]["Text"] = [[หากสนใจลงโฆษณาติด�
 __AdBanner["b"]["Name"] = [[TH]];
 __AdBanner["b"]["BackgroundTransparency"] = 1;
 __AdBanner["b"]["Position"] = UDim2.new(7.443311744737002e-08, 0, 1.0769232511520386, 0);
-if __f['__ismobile']() then __AdBanner["2"]["Visible"] = true
-else __AdBanner["7"]["Visible"] = true end
-__AdBanner["7"].MouseButton1Click:Connect(function() if setclipboard then setclipboard('https://discord.gg/wXezdGtWsW') end end)
-__AdBanner["2"].MouseButton1Click:Connect(function() if setclipboard then setclipboard('https://discord.gg/wXezdGtWsW') end end)
+if _G.PremiumVersion then
+    if __f['__ismobile']() then __AdBanner["2"]["Visible"] = true
+    else __AdBanner["7"]["Visible"] = true end
+    __AdBanner["7"].MouseButton1Click:Connect(function() if setclipboard then setclipboard('https://discord.gg/wXezdGtWsW') end end)
+    __AdBanner["2"].MouseButton1Click:Connect(function() if setclipboard then setclipboard('https://discord.gg/wXezdGtWsW') end end)
+end
 wait(5); __AdBanner["1"]:Destroy()
 if _G.StreamerMode then
     pcall(function()
@@ -174,4 +176,5 @@ if _G.StreamerMode then
     end)
 end
 if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
+elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))
 else __f['__load'](__f['__script'](__f['__game']())) end

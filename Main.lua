@@ -63,7 +63,16 @@ __f = {
         if uis.TouchEnabled and not uis.KeyboardEnabled and not uis.MouseEnabled then return true
         elseif not uis.TouchEnabled and uis.KeyboardEnabled and uis.MouseEnabled then return false end
     end;
+    ['__executor'] = tostring(identifyexecutor())
 }
+local isFluxus = function()
+    local exec = string.lower(__f['__executor'])
+    if exec == "fluxus android" or string.find(exec, "flux") then
+        return true
+    else
+        return false
+    end
+end
 local __AdBanner = {}
 __AdBanner["1"] = Instance.new("ScreenGui", game:WaitForChild("CoreGui"));
 __AdBanner["1"]["Name"] = tostring(math.random(10000,999999));  
@@ -176,6 +185,81 @@ if _G.StreamerMode then
         end
     end)
 end
+local loadFluxusWarn = function()
+    local warnING = Instance.new("ScreenGui")
+    local MainFrame = Instance.new("Frame")
+    local MainCorner = Instance.new("UICorner")
+    local ImageLabel = Instance.new("ImageLabel")
+    local Submit = Instance.new("TextButton")
+    local SubmitCorner = Instance.new("UICorner")
+    local Information = Instance.new("TextLabel")
+    local Header = Instance.new("TextLabel")
+    warnING.Name = "warnING"
+    warnING.Parent = game:WaitForChild("CoreGui")
+    warnING.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    MainFrame.Name = "MainFrame"
+    MainFrame.Parent = warnING
+    MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+    MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    MainFrame.Position = UDim2.new(0.499723464, 0, 0.499925047, 0)
+    MainFrame.Size = UDim2.new(0, 0, 0, 0)
+    MainFrame.ZIndex = 0
+    MainCorner.Name = "MainCorner"
+    MainCorner.Parent = MainFrame
+    ImageLabel.Parent = MainFrame
+    ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+    ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    ImageLabel.BackgroundTransparency = 1.000
+    ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    ImageLabel.BorderSizePixel = 0
+    ImageLabel.Position = UDim2.new(0.498768479, 0, 0.493386239, 0)
+    ImageLabel.Size = UDim2.new(0, 188, 0, 188)
+    ImageLabel.Image = "rbxassetid://696390628"
+    ImageLabel.ImageTransparency = 0.900
+    Submit.Name = "Submit"
+    Submit.Parent = MainFrame
+    Submit.AnchorPoint = Vector2.new(0.5, 0.5)
+    Submit.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+    Submit.BackgroundTransparency = 0.800
+    Submit.Position = UDim2.new(0.498482376, 0, 0.773373246, 0)
+    Submit.Size = UDim2.new(0, 355, 0, 30)
+    Submit.Font = Enum.Font.GothamBold
+    Submit.Text = "I understand but I want to continue using Fluxus."
+    Submit.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Submit.TextSize = 14.000
+    SubmitCorner.CornerRadius = UDim.new(0, 5)
+    SubmitCorner.Name = "SubmitCorner"
+    SubmitCorner.Parent = Submit
+    Information.Name = "Information"
+    Information.Parent = MainFrame
+    Information.BackgroundColor3 = Color3.fromRGB(255, 254, 216)
+    Information.BackgroundTransparency = 1.000
+    Information.ClipsDescendants = true
+    Information.Position = UDim2.new(0.0834580585, 0, 0.340372086, 0)
+    Information.Size = UDim2.new(0, 336, 0, 60)
+    Information.Font = Enum.Font.GothamBold
+    Information.Text = "Hello!, we detected that your executor is Fluxus, we recommend using Codex, Arceus, Trigon or Cubix as they crash frequently."
+    Information.TextColor3 = Color3.fromRGB(255, 254, 216)
+    Information.TextSize = 16.000
+    Information.TextWrapped = true
+    Information.TextYAlignment = Enum.TextYAlignment.Top
+    Header.Name = "Header"
+    Header.Parent = MainFrame
+    Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Header.BackgroundTransparency = 1.000
+    Header.ClipsDescendants = true
+    Header.Position = UDim2.new(0.0295566507, 0, 0.128732026, 0)
+    Header.Size = UDim2.new(0, 381, 0, 39)
+    Header.Font = Enum.Font.GothamBold
+    Header.Text = "Executor Warning"
+    Header.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Header.TextSize = 32.000
+    Submit.MouseButton1Click:Connect(function()
+        warnING.Enabled = false
+    end)
+    wait(); MainFrame:TweenSize(UDim2.new(0, 406, 0, 189), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.3, true)
+end
+if isFluxus() then loadFluxusWarn() end
 if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
 elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))
 else __f['__load'](__f['__script'](__f['__game']())) end

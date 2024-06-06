@@ -53,6 +53,7 @@ __f = {
         elseif p == 4442272183 then return "BloxFruits"
         elseif p == 7449423635 then return "BloxFruits"
         elseif p == 537413528 then return "BuildABoat"
+        elseif p == 16389398622 then return "DustyTrip"
         else return "BladeBall" end
     end;
     ['__script'] = function(m) return "https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Alchemy/__"..m..".lua" end;

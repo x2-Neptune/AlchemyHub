@@ -162,7 +162,7 @@ __AdBanner["b"]["Text"] = [[หากสนใจลงโฆษณาติด�
 __AdBanner["b"]["Name"] = [[TH]];
 __AdBanner["b"]["BackgroundTransparency"] = 1;
 __AdBanner["b"]["Position"] = UDim2.new(7.443311744737002e-08, 0, 1.0769232511520386, 0);
-if _G.PremiumVersion then
+if not _G.PremiumVersion then
     if __f['__ismobile']() then __AdBanner["2"]["Visible"] = true
     else __AdBanner["7"]["Visible"] = true end
     __AdBanner["7"].MouseButton1Click:Connect(function() if setclipboard then setclipboard('https://discord.gg/wXezdGtWsW') end end)

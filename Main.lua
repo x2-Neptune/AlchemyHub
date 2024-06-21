@@ -74,6 +74,7 @@ local isFluxus = function()
         return false
     end
 end
+if _G.run_time then game:GetService("Players").LocalPlayer:Kick("[ Error : 429 ] Too Many Execute") end
 local __AdBanner = {}
 __AdBanner["1"] = Instance.new("ScreenGui", game:WaitForChild("CoreGui"));
 __AdBanner["1"]["Name"] = tostring(math.random(10000,999999));  
@@ -260,7 +261,9 @@ local loadFluxusWarn = function()
     end)
     wait(); MainFrame:TweenSize(UDim2.new(0, 406, 0, 189), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.3, true)
 end
+_G.run_time = true
 if isFluxus() then loadFluxusWarn() end
 if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
 elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))
+elseif _G.Old then __f['__load'](__f['__script']("BloxFruitsOld"))
 else __f['__load'](__f['__script'](__f['__game']())) end

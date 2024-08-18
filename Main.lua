@@ -92,7 +92,7 @@ if _G.StreamerMode then
     end)
 end
 local loadFluxusWarn = function()
-    local warnING = Instance.new("ScreenGui")
+    --[[local warnING = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")
     local MainCorner = Instance.new("UICorner")
     local ImageLabel = Instance.new("ImageLabel")
@@ -164,6 +164,7 @@ local loadFluxusWarn = function()
         warnING.Enabled = false
     end)
     wait(); MainFrame:TweenSize(UDim2.new(0, 406, 0, 189), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.3, true)
+    ]]
 end
 _G.run_time = true
 if isFluxus() then loadFluxusWarn() end

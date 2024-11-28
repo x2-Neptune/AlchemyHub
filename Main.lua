@@ -92,6 +92,30 @@ if _G.StreamerMode then
         end
     end)
 end
+local UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI1.lua"))()
+local Notification = UILibrary:Notification();
+Notification.new({
+	Title = "Wanna Join Discord Server?",
+	Description = "We have big community and news on this server",
+	Dialog = true,
+	Buttons = {
+		{
+			Title = "Sure!",
+			Callback = function()
+				print('discord.gg/alchemyhub')
+                if setclipboard then
+                    setclipboard("Dont for get to join > https://discord.gg/alchemyhub")
+                end
+			end,
+		},
+		{
+			Title = "No Thanks",
+			Callback = function()
+				print('discord.gg/alchemyhub')
+			end,
+		}
+	}
+})
 local loadFluxusWarn = function()
     --[[local warnING = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")

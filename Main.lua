@@ -46,6 +46,7 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣦⣤⣤⡾⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ]]
+--84221975933832 logo ( NETA )
 __f = {
     ['__game'] = function()
         local p = game.PlaceId
@@ -59,6 +60,7 @@ __f = {
         else return "BladeBall" end
     end;
     ['__script'] = function(m) return "https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Alchemy/__"..m..".lua" end;
+    ['__pscript'] = function(m) return "https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Premium/__"..m..".lua" end;
     ['__load'] = function(s) loadstring(game:HttpGet(s))() end;
     ['__ismobile'] = function()
         local uis = game:GetService("UserInputService")
@@ -197,4 +199,5 @@ if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
 elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))
 elseif _G.AutoBounty then __f['__load'](__f['__script']("AutoBounty"))
 elseif _G.Old then __f['__load'](__f['__script']("BloxFruitsOld"))
+elseif getgenv().premium then __f['__load'](__f['__pscript'](__f['__game']()))
 else __f['__load'](__f['__script'](__f['__game']())) end

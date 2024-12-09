@@ -69,9 +69,9 @@ __f = {
     end;
     ['__executor'] = tostring(identifyexecutor())
 }
-local isFluxus = function()
+local isDelta = function()
     local exec = string.lower(__f['__executor'])
-    if exec == "fluxus android" or string.find(exec, "flux") then
+    if exec == "delta" or string.find(exec, "delta") then
         return true
     else
         return false
@@ -127,8 +127,8 @@ Notification.new({
 		}
 	}
 })
-local loadFluxusWarn = function()
-    --[[local warnING = Instance.new("ScreenGui")
+local loadDeltaWarn = function()
+    local warnING = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")
     local MainCorner = Instance.new("UICorner")
     local ImageLabel = Instance.new("ImageLabel")
@@ -166,7 +166,7 @@ local loadFluxusWarn = function()
     Submit.Position = UDim2.new(0.498482376, 0, 0.773373246, 0)
     Submit.Size = UDim2.new(0, 355, 0, 30)
     Submit.Font = Enum.Font.GothamBold
-    Submit.Text = "I understand but I want to continue using Fluxus."
+    Submit.Text = "I understand but I want to continue using Delta."
     Submit.TextColor3 = Color3.fromRGB(255, 255, 255)
     Submit.TextSize = 14.000
     SubmitCorner.CornerRadius = UDim.new(0, 5)
@@ -180,7 +180,7 @@ local loadFluxusWarn = function()
     Information.Position = UDim2.new(0.0834580585, 0, 0.340372086, 0)
     Information.Size = UDim2.new(0, 336, 0, 60)
     Information.Font = Enum.Font.GothamBold
-    Information.Text = "Hello!, we detected that your executor is Fluxus, we recommend using Codex, Arceus, Trigon or Cubix as they crash frequently."
+    Information.Text = "Hello!, we detected that your executor is Delta, we recommend using Codex, Arceus or Cubix, cuz Delta not Support Our Scripts."
     Information.TextColor3 = Color3.fromRGB(255, 254, 216)
     Information.TextSize = 16.000
     Information.TextWrapped = true
@@ -200,11 +200,10 @@ local loadFluxusWarn = function()
         warnING.Enabled = false
     end)
     wait(); MainFrame:TweenSize(UDim2.new(0, 406, 0, 189), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.3, true)
-    ]]
 end
 _G.run_time = true
 pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__Finded.lua"))() end)
-if isFluxus() then loadFluxusWarn() end
+if isDelta() then loadDeltaWarn() end
 if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
 elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))
 elseif _G.AutoBounty then __f['__load'](__f['__script']("AutoBounty"))

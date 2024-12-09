@@ -50,17 +50,16 @@
 __f = {
     ['__game'] = function()
         local p = game.PlaceId
-        if p == 2753915549 then return "BloxFruits"
-        elseif p == 4442272183 then return "BloxFruits"
-        elseif p == 7449423635 then return "BloxFruits"
-        elseif p == 537413528 then return "BuildABoat"
+        if p == 2753915549 then return "v3/loaders/a1a6b1634179469cd1b8f22b2a32492d.lua" --Blox Fruits
+        elseif p == 4442272183 then return "v3/loaders/a1a6b1634179469cd1b8f22b2a32492d.lua" --Blox Fruits
+        elseif p == 7449423635 then return "v3/loaders/a1a6b1634179469cd1b8f22b2a32492d.lua" --Blox Fruits
+        elseif p == 537413528 then return "v3/loaders/002e681a98a87f16b980923617813aac.lua" --Build A Boad
         --elseif p == 16389398622 then return "DustyTrip"
         --elseif p == 286090429 then return "Arsenal"
-        elseif p == 16732694052 then return "Fisch"
+        elseif p == 16732694052 then return "v3/loaders/b483c866b947fd0b7a2558cf67ae1417.lua" --Fisch
         else return "BladeBall" end
     end;
     ['__script'] = function(m) return "https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Alchemy/__"..m..".lua" end;
-    ['__nscript'] = function(m) return "https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Old/__"..m..".lua" end;
     ['__load'] = function(s) loadstring(game:HttpGet(s))() end;
     ['__ismobile'] = function()
         local uis = game:GetService("UserInputService")
@@ -208,5 +207,7 @@ if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
 elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))
 elseif _G.AutoBounty then __f['__load'](__f['__script']("AutoBounty"))
 elseif _G.Old then __f['__load'](__f['__script']("BloxFruitsOld"))
-elseif _G.Alchemy then __f['__load'](__f['__nscript'](__f['__game']()))
-else __f['__load'](__f['__script'](__f['__game']())) end
+else
+    getgenv().loader = __f['__game']()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6df239f7eb1c8bb019d8c87e92784540.lua"))()
+end

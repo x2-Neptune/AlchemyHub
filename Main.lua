@@ -207,6 +207,7 @@ if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
 elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))
 elseif _G.AutoBounty then __f['__load'](__f['__script']("AutoBounty"))
 elseif _G.Old then __f['__load'](__f['__script']("BloxFruitsOld"))
+elseif _G.VisualFarm then loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/23a949918d0b9965966a3ef777171127.lua"))();
 else
     getgenv().loader = __f['__game']()
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6df239f7eb1c8bb019d8c87e92784540.lua"))()

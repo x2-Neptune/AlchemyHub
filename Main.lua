@@ -68,14 +68,25 @@ __f = {
     end;
     ['__executor'] = tostring(identifyexecutor())
 }
-local isDelta = function()
+local isExecutors = function(txt)
     local exec = string.lower(__f['__executor'])
-    if exec == "delta" or string.find(exec, "delta") then
+    if exec == tostring(txt) or string.find(exec, tostring(txt)) then
         return true
     else
         return false
     end
 end
+local isNotSupport = function()
+    local exec = string.lower(__f['__executor'])
+    if exec == "luna" or string.find(exec, "luna") then
+        return true
+    elseif exec == "jjsploit" or string.find(exec, "jjsploit") then
+        return true
+    else
+        return false
+    end
+end
+if isNotSupport() then game.Players.LocalPlayer:Kick("⚠️ Detect "..__f['__executor']..", This executor not support please change to highest level executor. ⚠️") end;
 if _G.run_time then game:GetService("Players").LocalPlayer:Kick("[ Error : 429 ] Too Many Execute") end
 if _G.StreamerMode then
     pcall(function()
@@ -92,7 +103,7 @@ if _G.StreamerMode then
             end
         end
     end)
-end;_G.Alchemy = premium or getgenv().premium
+end;
 spawn(function()
     pcall(function()
         game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -126,7 +137,7 @@ Notification.new({
 		}
 	}
 })
-local loadDeltaWarn = function()
+local loadWarn = function(__text,__exec)
     local warnING = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")
     local MainCorner = Instance.new("UICorner")
@@ -165,7 +176,7 @@ local loadDeltaWarn = function()
     Submit.Position = UDim2.new(0.498482376, 0, 0.773373246, 0)
     Submit.Size = UDim2.new(0, 355, 0, 30)
     Submit.Font = Enum.Font.GothamBold
-    Submit.Text = "I understand but I want to continue using Delta."
+    Submit.Text = "I understand but I want to continue using "..__exec.."."
     Submit.TextColor3 = Color3.fromRGB(255, 255, 255)
     Submit.TextSize = 14.000
     SubmitCorner.CornerRadius = UDim.new(0, 5)
@@ -179,9 +190,9 @@ local loadDeltaWarn = function()
     Information.Position = UDim2.new(0.0834580585, 0, 0.340372086, 0)
     Information.Size = UDim2.new(0, 336, 0, 60)
     Information.Font = Enum.Font.GothamBold
-    Information.Text = "Hello!, we detected that your executor is Delta, we recommend using Codex, Arceus or Cubix, cuz Delta not Support Our Scripts."
+    Information.Text = __text
     Information.TextColor3 = Color3.fromRGB(255, 254, 216)
-    Information.TextSize = 16.000
+    Information.TextSize = 15.000
     Information.TextWrapped = true
     Information.TextYAlignment = Enum.TextYAlignment.Top
     Header.Name = "Header"
@@ -202,13 +213,11 @@ local loadDeltaWarn = function()
 end
 _G.run_time = true
 pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__Finded.lua"))() end)
-if isDelta() then loadDeltaWarn() end
+if isExecutors("delta") then loadWarn("Hello!, we detected that your executor is Delta, we recommend using ArceusX or Supported Executor, because Delta not Support Our Fully Scripts.","Delta") end;
+if isExecutors("solara") then loadWarn("Hello!, we detected that your executor is Solara, we recommend using Xeno ( On fisch ), Swift or Paid Executor, because Solara not Support Our Fully Scripts.","Solara") end;
 if _G.Aimbot then __f['__load'](__f['__script']("Aimbot"))
 elseif _G.FruitFinder then __f['__load'](__f['__script']("FruitFinder"))
 elseif _G.AutoBounty then __f['__load'](__f['__script']("AutoBounty"))
 elseif _G.Old then __f['__load'](__f['__script']("BloxFruitsOld"))
 elseif _G.VisualFarm then loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/23a949918d0b9965966a3ef777171127.lua"))();
-else
-    getgenv().loader = __f['__game']()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6df239f7eb1c8bb019d8c87e92784540.lua"))()
-end
+else getgenv().loader = __f['__game'](); loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6df239f7eb1c8bb019d8c87e92784540.lua"))() end;

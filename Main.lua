@@ -76,7 +76,7 @@ local isExecutors = function(txt)
         return false
     end
 end
-local isNotSupport = function()
+--[[local isNotSupport = function()
     local exec = string.lower(__f['__executor'])
     if exec == "luna" or string.find(exec, "luna") then
         return true
@@ -86,7 +86,7 @@ local isNotSupport = function()
         return false
     end
 end
-if isNotSupport() then game.Players.LocalPlayer:Kick("⚠️ Detect "..__f['__executor']..", This executor not support please change to highest level executor. ⚠️") end;
+if isNotSupport() then game.Players.LocalPlayer:Kick("⚠️ Detect "..__f['__executor']..", This executor not support please change to highest level executor. ⚠️") end;]]
 if _G.run_time then game:GetService("Players").LocalPlayer:Kick("[ Error : 429 ] Too Many Execute") end
 if _G.StreamerMode then
     pcall(function()

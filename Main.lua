@@ -76,6 +76,7 @@ local isExecutors = function(txt)
         return false
     end
 end
+local Service = game:GetService("TextChatService")
 --[[local isNotSupport = function()
     local exec = string.lower(__f['__executor'])
     if exec == "luna" or string.find(exec, "luna") then
@@ -112,6 +113,10 @@ spawn(function()
             game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
         end)
     end)
+end)
+pcall(function()
+    Service.TextChannels.RBXSystem:DisplaySystemMessage("<font color='#00ff80'>Alchemy Hub On Top #1</font>")
+    Service.TextChannels.RBXSystem:DisplaySystemMessage("<font color='#9aaaff'>Join our discord at discord.gg/alchemyhub</font>")
 end)
 local UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI1.lua"))()
 local Notification = UILibrary:Notification();
@@ -213,6 +218,9 @@ local loadWarn = function(__text,__exec)
 end
 _G.run_time = true
 pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__Finded.lua"))() end)
+pcall(function()
+    Service.TextChannels.RBXSystem:DisplaySystemMessage("[ Alchemy Script ] <font color='#ffff00'>Connect to Luarmor</font>")
+end)
 if isExecutors("delta") then loadWarn("Hello!, we detected that your executor is Delta, we recommend using ArceusX or Supported Executor, because Delta not Support Our Fully Scripts.","Delta") end;
 if isExecutors("solara") then loadWarn("Hello!, we detected that your executor is Solara, we recommend using Xeno ( On fisch ), Swift or Paid Executor, because Solara not Support Our Fully Scripts.","Solara") end;
 if _G.Aimbot then __f['__load']("https://api.luarmor.net/files/v3/loaders/99d54b8a79622e362bca83739647c514.lua")

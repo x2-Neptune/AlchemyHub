@@ -57,6 +57,7 @@ __f = {
         --elseif p == 16389398622 then return "DustyTrip"
         --elseif p == 286090429 then return "Arsenal"
         elseif p == 16732694052 then return "v3/loaders/b483c866b947fd0b7a2558cf67ae1417.lua" --Fisch
+        elseif p == 10450270085 then return "v3/loaders/de74ae80eeef28b64ada856247d66a90.lua" --Jujutsu Infinity
         else return "BladeBall" end
     end;
     ['__script'] = function(m) return "https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Alchemy/__"..m..".lua" end;

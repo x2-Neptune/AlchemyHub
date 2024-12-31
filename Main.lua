@@ -100,12 +100,34 @@ if _G.StreamerMode then
         for i=1,#a_protect do
             if a_protect[i].ClassName == "TextLabel" then
                 if a_protect[i].Text == n_protect then
-                    a_protect[i].Text = "Protect By Alchemy"
+                    a_protect[i].Text = "Alchemy Hub"
+                    a_protect[i].Changed:Connect(function()
+                        a_protect[i].Text = "Alchemy Hub"
+                    end)
                 elseif a_protect[i].Text == "@"..f_protect then
                     a_protect[i].Text = "@Protect By Alchemy"
+                    a_protect[i].Changed:Connect(function()
+                        a_protect[i].Text = "@Protect By Alchemy"
+                    end)
                 end
             end
         end
+        game.DescendantAdded:Connect(function(descendant)
+            if descendant.ClassName == "TextLabel" then
+                if descendant.Text == n_protect then
+                    descendant.Text = "Alchemy Hub"
+                    descendant.Changed:Connect(function()
+                        descendant.Text = "Alchemy Hub"
+                    end)
+                elseif descendant.Text == "@"..f_protect then
+                    descendant.Text = "@Protect By Alchemy"
+                    descendant.Changed:Connect(function()
+                        descendant.Text = "@Protect By Alchemy"
+                    end)
+                end
+            end
+
+        end)
     end)
 end;
 spawn(function()

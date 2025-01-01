@@ -167,6 +167,14 @@ Notification.new({
 		}
 	}
 })
+pcall(function()
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "ALCHEMY HUB 2025", 
+		Text = "Happy New Year 2025 Kubb" ,
+		Icon = "http://www.roblox.com/asset/?id=107789244544782",
+		Duration = 20
+	})
+end)
 local loadWarn = function(__text,__exec)
     local warnING = Instance.new("ScreenGui")
     local MainFrame = Instance.new("Frame")

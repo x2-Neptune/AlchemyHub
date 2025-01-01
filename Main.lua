@@ -169,9 +169,9 @@ Notification.new({
 })
 pcall(function()
 	game.StarterGui:SetCore("SendNotification", {
-		Title = "ALCHEMY HUB 2025", 
+		Title = "ALCHEMY HUB", 
 		Text = "Happy New Year 2025 Kubb" ,
-		Icon = "http://www.roblox.com/asset/?id=107789244544782",
+		Icon = "http://www.roblox.com/asset/?id=123888553943205",
 		Duration = 20
 	})
 end)

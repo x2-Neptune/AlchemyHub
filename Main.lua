@@ -36,11 +36,7 @@ __f = {
 }
 local isExecutors = function(txt)
     local exec = string.lower(__f['__executor'])
-    if exec == tostring(txt) or string.find(exec, tostring(txt)) then
-        return true
-    else
-        return false
-    end
+    return exec == tostring(txt) or string.find(exec, tostring(txt))
 end
 local Service = game:GetService("TextChatService")
 --[[local isNotSupport = function()
@@ -209,8 +205,8 @@ pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiI
 pcall(function()
     Service.TextChannels.RBXSystem:DisplaySystemMessage("[ Alchemy Script ] <font color='#ffff00'>Connect to Luarmor</font>")
 end)
-if isExecutors("delta") then loadWarn("Hello!, we detected that your executor is Delta, we recommend using ArceusX or Supported Executor, because Delta not Support Our Fully Scripts.","Delta") end;
-if isExecutors("solara") then loadWarn("Hello!, we detected that your executor is Solara, we recommend using Xeno ( On fisch ), Swift or Paid Executor, because Solara not Support Our Fully Scripts.","Solara") end;
+--if isExecutors("delta") then loadWarn("Hello!, we detected that your executor is Delta, we recommend using ArceusX or Supported Executor, because Delta not Support Our Fully Scripts.","Delta") end;
+--if isExecutors("solara") then loadWarn("Hello!, we detected that your executor is Solara, we recommend using Xeno ( On fisch ), Swift or Paid Executor, because Solara not Support Our Fully Scripts.","Solara") end;
 if _G.Aimbot then __f['__load']("https://api.luarmor.net/files/v3/loaders/99d54b8a79622e362bca83739647c514.lua")
 elseif _G.FruitFinder then game.Players.LocalPlayer:Kick("Coming Soon!")
 elseif _G.AutoBounty then game.Players.LocalPlayer:Kick("Coming Soon!")

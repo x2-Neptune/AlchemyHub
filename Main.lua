@@ -210,6 +210,6 @@ end)
 --if isExecutors("delta") then loadWarn("Hello!, we detected that your executor is Delta, we recommend using ArceusX or Supported Executor, because Delta not Support Our Fully Scripts.","Delta") end;
 --if isExecutors("solara") then loadWarn("Hello!, we detected that your executor is Solara, we recommend using Xeno ( On fisch ), Swift or Paid Executor, because Solara not Support Our Fully Scripts.","Solara") end;
 if _G.Aimbot then __f['__load']("https://api.luarmor.net/files/v3/loaders/99d54b8a79622e362bca83739647c514.lua")
-elseif _G.FruitFinder then game.Players.LocalPlayer:Kick("Coming Soon!")
+elseif _G.FruitFinder then loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/53bdb753f44b36ddb22efdd03c1bdd2f.lua"))()
 elseif _G.AutoBounty then game.Players.LocalPlayer:Kick("Coming Soon!")
 else getgenv().loader = __f['__game'](); __f['__load']("https://api.luarmor.net/files/v3/loaders/6df239f7eb1c8bb019d8c87e92784540.lua") end;

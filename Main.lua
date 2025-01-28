@@ -105,6 +105,9 @@ pcall(function()
     Service.TextChannels.RBXSystem:DisplaySystemMessage("<font color='#9aaaff'>Join our discord at discord.gg/alchemyhub</font>")
 end)
 local UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI1.lua"))()
+if game.GameId == 5750914919 then -- for fisch
+    UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI2.lua"))()
+end
 local Notification = UILibrary:Notification();
 Notification.new({
 	Title = "Wanna Join Discord Server?",

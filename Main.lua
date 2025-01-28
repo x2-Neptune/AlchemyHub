@@ -106,6 +106,7 @@ pcall(function()
 end)
 local UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI1.lua"))()
 if game.GameId == 5750914919 then -- for fisch
+    print("SSDFSDF")
     UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI2.lua"))()
 end
 local Notification = UILibrary:Notification();

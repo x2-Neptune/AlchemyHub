@@ -40,7 +40,7 @@ local isExecutors = function(txt)
     local exec = string.lower(__f['__executor'])
     return exec == tostring(txt) or string.find(exec, tostring(txt))
 end
-local Service = game:GetService("TextChatService")
+--local Service = game:GetService("TextChatService")
 --[[local isNotSupport = function()
     local exec = string.lower(__f['__executor'])
     if exec == "luna" or string.find(exec, "luna") then
@@ -100,13 +100,13 @@ spawn(function()
         end)
     end)
 end)
+--[[
 pcall(function()
     Service.TextChannels.RBXSystem:DisplaySystemMessage("<font color='#00ff80'>Alchemy Hub On Top #1</font>")
     Service.TextChannels.RBXSystem:DisplaySystemMessage("<font color='#9aaaff'>Join our discord at discord.gg/alchemyhub</font>")
-end)
+end)]]
 local UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI1.lua"))()
 if game.GameId == 5750914919 then -- for fisch
-    print("SSDFSDF")
     UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI2.lua"))()
 end
 local Notification = UILibrary:Notification();
@@ -137,4 +137,4 @@ pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiI
 if _G.Aimbot then __f['__load']("https://api.luarmor.net/files/v3/loaders/99d54b8a79622e362bca83739647c514.lua")
 elseif _G.FruitFinder then loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/53bdb753f44b36ddb22efdd03c1bdd2f.lua"))()
 elseif _G.AutoBounty then game.Players.LocalPlayer:Kick("Coming Soon!")
-else getgenv().loader = __f['__game'](); __f['__load']("https://api.luarmor.net/files/v3/loaders/6df239f7eb1c8bb019d8c87e92784540.lua") end;
+else getgenv().loader = __f['__game'](); __f['__load']("https://raw.githubusercontent.com/x2-Neptune/AlchemyHub/main/Luarmor/Key") end;

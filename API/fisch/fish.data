@@ -1,3 +1,5 @@
+local fish = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish")
+
 return {
 	["Tempest Ray"] = {
 		WeightPool = {5, 20};

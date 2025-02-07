@@ -1,4 +1,22 @@
 local fish = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish")
+local module = require(script:WaitForChild("presents"))
+
+local tbl = {
+	["Desolate Deep"] = {
+		Trash = 22;
+		Common = 22;
+		Uncommon = 18;
+		Unusual = 17;
+		Rare = 14;
+	};
+	["Brine Pool"] = {
+		Trash = 29;
+		Common = 29;
+		Uncommon = 25;
+		Unusual = 23;
+		Rare = 15;
+	};
+}
 
 return {
 	["Tempest Ray"] = {

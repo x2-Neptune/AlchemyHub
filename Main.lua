@@ -112,7 +112,7 @@ end
 local Notification = UILibrary:Notification();
 Notification.new({
 	Title = "Wanna Join Discord Server?",
-	Description = "We have big community and news on this server\nWe also have key giveaway too, Happy New Year 2025!!",
+	Description = "We have big community and news on this server\nWe also have key giveaway too, Happy Valentine's Day!!",
 	Dialog = true,
 	Buttons = {
 		{

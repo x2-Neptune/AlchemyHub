@@ -53,6 +53,19 @@ end
 end
 if isNotSupport() then game.Players.LocalPlayer:Kick("⚠️ Detect "..__f['__executor']..", This executor not support please change to highest level executor. ⚠️") end;]]
 if _G.run_time then game:GetService("Players").LocalPlayer:Kick("\n⚠️ Please executor script only 1 times ⚠️") end
+task.spawn(function()
+    while true do task.wait()
+        if _G.AutoRelaunch then
+            pcall(function()
+                getgenv().re = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(Child)
+                    if Child.Name == 'ErrorPrompt' and Child:FindFirstChild('MessageArea') and Child.MessageArea:FindFirstChild("ErrorFrame") then
+                        game:GetService("TeleportService"):Teleport(game.PlaceId) 
+                    end
+                end)
+            end)
+        end
+    end
+end)
 if _G.StreamerMode then
     pcall(function()
         local a_protect = game:GetDescendants()

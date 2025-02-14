@@ -12,15 +12,20 @@ Copyright © 2025 Alchemy Hub - Script. All Rights Reserved.
 --84221975933832 logo ( NETA )
 __f = {
     ['__game'] = function()
-        local p = game.PlaceId
+        local g = game.GameId
+        if g == 994732206 then return "v3/loaders/311ad7329b80c2117f4bdbf46582dcc6.lua" -- Blox Fruits
+        elseif g == 5750914919 then return "v3/loaders/40142043704f8ec418b59eddd1cb1949.lua" -- Fisch
+        elseif g == 6325068386 then return "v3/loaders/4171685ce597cf71185c038656d405ca.lua" -- Bluelock Rivals
+        else
+            game:GetService("Players").LocalPlayer:Kick("\n⚠️ This game is discontinued or not support ⚠️")
+            return "."
+        end
+    end;
+    ['__premium'] = function()
         local g = game.GameId
         if g == 994732206 then return "v3/loaders/a1a6b1634179469cd1b8f22b2a32492d.lua" -- Blox Fruits
-        elseif p == 537413528 then return "v3/loaders/002e681a98a87f16b980923617813aac.lua" -- Build A Boad
         elseif g == 5750914919 then return "v3/loaders/b483c866b947fd0b7a2558cf67ae1417.lua" -- Fisch
         elseif g == 6325068386 then return "v3/loaders/42375cfe2e65070104eaaa05a823d9b4.lua" -- Bluelock Rivals
-        elseif p == 10450270085 then return "v3/loaders/de74ae80eeef28b64ada856247d66a90.lua" -- Jujutsu Infinity
-        elseif p == 16379688837 then return "v3/loaders/de74ae80eeef28b64ada856247d66a90.lua" -- Jujutsu Infinity
-        elseif p == 16379684339 then return "v3/loaders/de74ae80eeef28b64ada856247d66a90.lua" -- Jujutsu Infinity
         else
             game:GetService("Players").LocalPlayer:Kick("\n⚠️ This game is discontinued or not support ⚠️")
             return "."
@@ -51,6 +56,13 @@ end
     end
 end
 if isNotSupport() then game.Players.LocalPlayer:Kick("⚠️ Detect "..__f['__executor']..", This executor not support please change to highest level executor. ⚠️") end;]]
+_G.AutoRelaunch = auto_rejoin
+_G.StreamerMode = streamer_mode
+
+_G.Aimbot = aimbot
+_G.FruitFinder = fruits_finder
+_G.Premium = premium
+
 if _G.run_time then game:GetService("Players").LocalPlayer:Kick("\n⚠️ Please executor script only 1 times ⚠️") end
 task.spawn(function()
     while true do task.wait()
@@ -145,8 +157,9 @@ Notification.new({
 	}
 })
 _G.run_time = true
+local tar;
 pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__Finded.lua"))() end)
 if _G.Aimbot then __f['__load']("https://api.luarmor.net/files/v3/loaders/99d54b8a79622e362bca83739647c514.lua")
 elseif _G.FruitFinder then loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/53bdb753f44b36ddb22efdd03c1bdd2f.lua"))()
-elseif _G.AutoBounty then game.Players.LocalPlayer:Kick("Coming Soon!")
+elseif _G.Premium then tar = __f['__premium'](); __f['__load']("https://api.luarmor.net/files/"..tar) 
 else getgenv().loader = __f['__game'](); __f['__load']("https://raw.githubusercontent.com/x2-Neptune/AlchemyHub/main/Luarmor/Key") end;

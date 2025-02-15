@@ -81,39 +81,42 @@ task.spawn(function()
 end)
 if _G.StreamerMode then
     pcall(function()
-        local a_protect = game:GetDescendants()
-        local n_protect =  game:GetService("Players").LocalPlayer.DisplayName
-        local f_protect =  game:GetService("Players").LocalPlayer.Name
-        for i=1,#a_protect do
-            if a_protect[i].ClassName == "TextLabel" then
-                if a_protect[i].Text == n_protect then
-                    a_protect[i].Text = "Alchemy Hub"
-                    a_protect[i].Changed:Connect(function()
-                        a_protect[i].Text = "Alchemy Hub"
+        local allSpace = game:GetDescendants()
+        for i=1,#allSpace do
+            if allSpace[i].ClassName == "TextLabel" then
+                if string.find(allSpace[i].Text, game.Players.LocalPlayer.Name) then
+                    allSpace[i].Text = string.gsub(allSpace[i].Text, game.Players.LocalPlayer.Name, "[Protect By Alchemy Hub]")
+                    allSpace[i].Changed:Connect(function()
+                        allSpace[i].Text = string.gsub(allSpace[i].Text, game.Players.LocalPlayer.Name, "[Protect By Alchemy Hub]")
                     end)
-                elseif a_protect[i].Text == "@"..f_protect then
-                    a_protect[i].Text = "@Protect By Alchemy"
-                    a_protect[i].Changed:Connect(function()
-                        a_protect[i].Text = "@Protect By Alchemy"
+                end
+                if string.find(allSpace[i].Text, game.Players.LocalPlayer.DisplayName) then
+                    allSpace[i].Text = string.gsub(allSpace[i].Text, game.Players.LocalPlayer.DisplayName, "[Protect By Alchemy Hub]")
+                    allSpace[i].Changed:Connect(function()
+                        allSpace[i].Text = string.gsub(allSpace[i].Text, game.Players.LocalPlayer.DisplayName, "[Protect By Alchemy Hub]")
                     end)
                 end
             end
         end
         game.DescendantAdded:Connect(function(descendant)
             if descendant.ClassName == "TextLabel" then
-                if descendant.Text == n_protect then
-                    descendant.Text = "Alchemy Hub"
+                if string.find(descendant.Text, game.Players.LocalPlayer.Name) then
+                    descendant.Text = string.gsub(descendant.Text, game.Players.LocalPlayer.Name, "[Protect By Alchemy Hub]")
                     descendant.Changed:Connect(function()
-                        descendant.Text = "Alchemy Hub"
-                    end)
-                elseif descendant.Text == "@"..f_protect then
-                    descendant.Text = "@Protect By Alchemy"
-                    descendant.Changed:Connect(function()
-                        descendant.Text = "@Protect By Alchemy"
+                        descendant.Text = string.gsub(descendant.Text, game.Players.LocalPlayer.Name, "[Protect By Alchemy Hub]")
                     end)
                 end
             end
-
+        end)
+        game.DescendantAdded:Connect(function(descendant)
+            if descendant.ClassName == "TextLabel" then
+                if string.find(descendant.Text, game.Players.LocalPlayer.DisplayName) then
+                    descendant.Text = string.gsub(descendant.Text, game.Players.LocalPlayer.DisplayName, "[Protect By Alchemy Hub]")
+                    descendant.Changed:Connect(function()
+                        descendant.Text = string.gsub(descendant.Text, game.Players.LocalPlayer.DisplayName, "[Protect By Alchemy Hub]")
+                    end)
+                end
+            end
         end)
     end)
 end;

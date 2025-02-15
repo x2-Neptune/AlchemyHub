@@ -63,7 +63,7 @@ _G.Aimbot = aimbot or _G.Aimbot
 _G.FruitFinder = fruits_finder or _G.FruitFinder
 _G.Premium = premium
 
-_G.Config = setting
+_G.Config = setting or _G.Config
 
 if _G.run_time then game:GetService("Players").LocalPlayer:Kick("\n⚠️ Please executor script only 1 times ⚠️") end
 task.spawn(function()

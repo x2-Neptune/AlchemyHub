@@ -59,8 +59,8 @@ if isNotSupport() then game.Players.LocalPlayer:Kick("⚠️ Detect "..__f['__ex
 _G.AutoRelaunch = auto_rejoin
 _G.StreamerMode = streamer_mode
 
-_G.Aimbot = aimbot
-_G.FruitFinder = fruits_finder
+_G.Aimbot = aimbot or _G.Aimbot
+_G.FruitFinder = fruits_finder or _G.FruitFinder
 _G.Premium = premium
 
 _G.Config = setting

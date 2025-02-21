@@ -16,6 +16,8 @@ __f = {
         if g == 994732206 then return "v3/loaders/311ad7329b80c2117f4bdbf46582dcc6.lua" -- Blox Fruits
         elseif g == 5750914919 then return "v3/loaders/40142043704f8ec418b59eddd1cb1949.lua" -- Fisch
         elseif g == 6325068386 then return "v3/loaders/4171685ce597cf71185c038656d405ca.lua" -- Bluelock Rivals
+        elseif g == 6931042565 then return "v3/loaders/abbbbec4c052ea223f09c7e819748161.lua" -- Volleyball Legends
+        elseif g == 6906326545 then return "v3/loaders/34a7bfd841e02f5b30b75712e5da67ae.lua" -- Basketball Showdown
         else
             game:GetService("Players").LocalPlayer:Kick("\n⚠️ This game is discontinued or not support ⚠️")
             return "."
@@ -26,6 +28,8 @@ __f = {
         if g == 994732206 then return "v3/loaders/a1a6b1634179469cd1b8f22b2a32492d.lua" -- Blox Fruits
         elseif g == 5750914919 then return "v3/loaders/b483c866b947fd0b7a2558cf67ae1417.lua" -- Fisch
         elseif g == 6325068386 then return "v3/loaders/42375cfe2e65070104eaaa05a823d9b4.lua" -- Bluelock Rivals
+        elseif g == 6931042565 then return "v3/loaders/2a04962aae55b8e5d6626f949470c40a.lua" -- Volleyball Legends
+        elseif g == 6906326545 then return "v3/loaders/f7d7cd2ec55759828c1e25f6feebe028.lua" -- Basketball Showdown
         else
             game:GetService("Players").LocalPlayer:Kick("\n⚠️ This game is discontinued or not support ⚠️")
             return "."
@@ -164,7 +168,7 @@ Notification.new({
 _G.run_time = true
 local tar;
 pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__Finded.lua"))() end)
-if _G.Aimbot then __f['__load']("https://api.luarmor.net/files/v3/loaders/99d54b8a79622e362bca83739647c514.lua")
-elseif _G.FruitFinder then loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/53bdb753f44b36ddb22efdd03c1bdd2f.lua"))()
+if _G.Aimbot then __f['__load']("https://api.luarmor.net/files/v3/loaders/066a14ff57c58562c0b4cacdddb0ae5a.lua")
+elseif _G.FruitFinder then __f['__load']("https://api.luarmor.net/files/v3/loaders/56e77f1d98c461e2b8f24647b42095b4.lua")
 elseif _G.Premium then tar = __f['__premium'](); __f['__load']("https://api.luarmor.net/files/"..tar) 
 else getgenv().loader = __f['__game'](); __f['__load']("https://raw.githubusercontent.com/x2-Neptune/AlchemyHub/main/Luarmor/Key") end;

@@ -1,4 +1,16 @@
 return {
+		["Ashen Fortune"] = {
+			PriceMultiply = 5;
+			Chance = 0;
+			Display = "Ashen Fortune";
+			Color = Color3.fromRGB(255, 170, 0);
+		};
+		Prismize = {
+			PriceMultiply = 8;
+			Chance = 0;
+			Display = "Prismize";
+			Color = Color3.fromRGB(41, 0, 62);
+		};
 		["Kingâ€™s Blessing"] = {
 			PriceMultiply = 1.5;
 			Chance = 0;
@@ -6,7 +18,7 @@ return {
 			Color = Color3.fromRGB(255, 255, 127);
 		};
 		["Tentacle Surge"] = {
-			PriceMultiply = 1.5;
+			PriceMultiply = 10;
 			Chance = 0;
 			Display = "Tentacle Surge";
 			Color = Color3.fromRGB(170, 170, 255);
@@ -181,7 +193,7 @@ return {
 			Color = Color3.fromRGB(208, 181, 255);
 		};
 		Amber = {
-			SpecificZones = {"Ancient Isles"};
+			SpecificZones = {"Ancient Isle Ocean"};
 			PriceMultiply = 0.5;
 			Chance = 8;
 			Display = "Amber";
@@ -324,5 +336,23 @@ return {
 			Chance = 0;
 			Display = "Lightning";
 			Color = Color3.fromRGB(229, 183, 0);
+		};
+		Chocolate = {
+			PriceMultiply = 2.5;
+			Chance = 0;
+			Display = "Chocolate";
+			Color = Color3.fromRGB(108, 77, 65);
+		};
+		Doomsday = {
+			PriceMultiply = 4;
+			Chance = 0;
+			Display = "Doomsday";
+			Color = Color3.fromRGB(255, 95, 0);
+		};
+		["Mila's Magic"] = {
+			PriceMultiply = 2.5;
+			Chance = 0;
+			Display = "Mila's Magic";
+			Color = Color3.fromRGB(255, 205, 176);
 		};
 };

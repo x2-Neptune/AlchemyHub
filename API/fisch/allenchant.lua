@@ -1,4 +1,12 @@
 return {
+		["Blessed Song"] = {
+			Description = "Makes progress speed 10% faster";
+			Color = Color3.fromRGB(0, 170, 255);
+			StrokeColor = Color3.fromRGB(0, 60, 90);
+			Display = "Blessed Song";
+			StatIncrease = 10;
+			IsSongOfTheDeep = true;
+		};
 		["Sea King"] = {
 			Description = "Makes fish 10% bigger";
 			Color = Color3.fromRGB(53, 77, 211);
@@ -239,4 +247,4 @@ return {
 			StatIncrease = 75;
 			IsExalted = true;
 		};
-}
+};

@@ -12,7 +12,7 @@ return {
 			Color = Color3.fromRGB(41, 0, 62);
 		};
 		["Kingâ€™s Blessing"] = {
-			PriceMultiply = 1.5;
+			PriceMultiply = 3.5;
 			Chance = 0;
 			Display = "Kingâ€™s Blessing";
 			Color = Color3.fromRGB(255, 255, 127);
@@ -254,7 +254,7 @@ return {
 			Color = Color3.fromRGB(162, 92, 6);
 		};
 		Aureolin = {
-			PriceMultiply = 5;
+			PriceMultiply = 6;
 			Chance = 0;
 			Display = "Aurulent";
 			Color = Color3.fromRGB(220, 154, 1);
@@ -336,6 +336,18 @@ return {
 			Chance = 0;
 			Display = "Lightning";
 			Color = Color3.fromRGB(229, 183, 0);
+		};
+		Clover = {
+			PriceMultiply = 4.5;
+			Chance = 0;
+			Display = "Clover";
+			Color = Color3.fromRGB(123, 255, 0);
+		};
+		Blarney = {
+			PriceMultiply = 4.5;
+			Chance = 0;
+			Display = "Blarney";
+			Color = Color3.fromRGB(56, 159, 19);
 		};
 		Chocolate = {
 			PriceMultiply = 2.5;

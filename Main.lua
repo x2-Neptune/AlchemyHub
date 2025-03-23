@@ -20,8 +20,7 @@ __f = {
         elseif g == 6906326545 then return "v3/loaders/34a7bfd841e02f5b30b75712e5da67ae.lua" -- Basketball Showdown
         elseif g == 3110388936 then return "v3/loaders/7101b7a1aa1a20ba3e47459795b9ac15.lua" -- Ninja Time
         else
-            game:GetService("Players").LocalPlayer:Kick("\n⚠️ This game is discontinued or not support ⚠️")
-            return "."
+            return "v3/loaders/fd6e9298c37fd63d2c6d3d979ea55516.lua" -- Universal
         end
     end;
     ['__premium'] = function()
@@ -33,8 +32,7 @@ __f = {
         elseif g == 6906326545 then return "v3/loaders/f7d7cd2ec55759828c1e25f6feebe028.lua" -- Basketball Showdown
         elseif g == 3110388936 then return "v3/loaders/18610b93f08ff724f43be630135ba68c.lua" -- Ninja Time
         else
-            game:GetService("Players").LocalPlayer:Kick("\n⚠️ This game is discontinued or not support ⚠️")
-            return "."
+            return "v3/loaders/83e1c25551a23c52e2c476e9bdd0c17a.lua" -- Universal
         end
     end;
     ['__script'] = function(m) return "https://raw.githubusercontent.com/ZoiIntra/__Script/main/__Alchemy/__"..m..".lua" end;

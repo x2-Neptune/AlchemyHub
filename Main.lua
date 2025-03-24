@@ -145,28 +145,36 @@ if game.GameId == 5750914919 then -- for fisch
     UILibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__UI2.lua"))()
 end
 local Notification = UILibrary:Notification();
-Notification.new({
-	Title = "Wanna Join Discord Server?",
-	Description = "We have big community and news on this server\nWe also have key giveaway too, Happy Valentine's Day!!",
-	Dialog = true,
-	Buttons = {
-		{
-			Title = "Sure!",
-			Callback = function()
-				print('discord.gg/alchemyhub')
-                if setclipboard then
-                    setclipboard("Dont for get to join > https://discord.gg/alchemyhub")
-                end
-			end,
-		},
-		{
-			Title = "No Thanks",
-			Callback = function()
-				print('discord.gg/alchemyhub')
-			end,
-		}
-	}
-})
+if _G.Premium then
+    Notification.new({
+        Title = "Thank you for Support!",
+        Description = "Enjoy scripts and features",
+        Duration = 10,
+    })
+else
+    Notification.new({
+        Title = "Wanna Join Discord Server?",
+        Description = "We have big community and news on this server\nWe also have key giveaway too, Thank you for all Support!!",
+        Dialog = true,
+        Buttons = {
+            {
+                Title = "Sure!",
+                Callback = function()
+                    print('discord.gg/alchemyhub')
+                    if setclipboard then
+                        setclipboard("Dont for get to join > https://discord.gg/alchemyhub")
+                    end
+                end,
+            },
+            {
+                Title = "No Thanks",
+                Callback = function()
+                    print('discord.gg/alchemyhub')
+                end,
+            }
+        }
+    })
+end
 _G.run_time = true
 local tar;
 pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ZoiIntra/__Script/refs/heads/main/__Finded.lua"))() end)
